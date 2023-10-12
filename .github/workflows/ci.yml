@@ -1,0 +1,21 @@
+name: PR tests
+on: pull_request
+jobs:
+  e2e:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      # https://github.com/cypress-io/github-action
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          record: true
+        env:
+          # pass the Cypress Cloud record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_PROJECT_ID: ${{ vars.CYPRESS_PROJECT_ID }}
+          CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
+          COMMIT_INFO_MESSAGE: Tests for PR ${{ github.event.number }} "${{ github.event.pull_request.title }}"
