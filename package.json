@@ -1,0 +1,17 @@
+{
+  "name": "automation-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Nicolas Amabile",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.1",
+    "dotenv": "^16.3.1"
+  }
+}
