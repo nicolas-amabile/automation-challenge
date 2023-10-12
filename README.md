@@ -7,6 +7,8 @@ Google Calculator
 > git clone git@github.com:nicolas-amabile/automation-challenge.git
 > cd automation-challenge
 > npm install
+# Add the baseUrl to the .env file
+> echo "CYPRESS_BASE_URL='https://www.google.com'" >> .env
 ```
 
 ### Run
