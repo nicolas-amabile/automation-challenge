@@ -15,6 +15,7 @@ const selectedOperationsForTesting = [
   'multiplication',
   'division',
   'mixed',
+  'invalid inputs'
 ]
 
 const operations = _.pick(allOperations, selectedOperationsForTesting)
